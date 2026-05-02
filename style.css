@@ -48,12 +48,12 @@ body {
 
 .hero h1 {
    font-family: 'Cinzel Decorative', serif !important;
-  font-size: 5rem;
+  font-size: 3rem;
   letter-spacing: 2px;
 }
 
 .hero h4 span {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   display: block;
   margin-top: 5px;
@@ -61,13 +61,12 @@ body {
 
 
 .hero h4 {
-  font-size: 3.4em
+  font-size: 2rem
 }
 
 
 
 .hero p {
-
   font-weight: bold;
 }
 .hero a {
@@ -235,7 +234,6 @@ section.home {
 
 .wanita {
   text-align: left;
-
 }
 
 .couple .col-8 {
@@ -1153,7 +1151,7 @@ html, body {
 }
 
 section {
-  scroll-snap-align: start;
+  scroll-snap-align: none;
   min-height: auto;
   position: relative;
   padding: 80px 20px;
