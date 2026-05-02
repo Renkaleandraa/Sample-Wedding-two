@@ -1154,8 +1154,9 @@ html, body {
 
 section {
   scroll-snap-align: start;
-  min-height: 100vh;
+  min-height: auto;
   position: relative;
+  padding: 80px 20px;
 }
 
 
@@ -1289,6 +1290,7 @@ section {
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
+    padding: 60px 15px;
   }
 
   .section-title {
