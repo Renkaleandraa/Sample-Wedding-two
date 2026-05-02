@@ -1148,10 +1148,8 @@ section {
   display: block;
 }
 
-
-
 html, body {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: none;
 }
 
 section {
@@ -1160,9 +1158,6 @@ section {
   position: relative;
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
 
 .scrollable {
   max-height: 100vh;
