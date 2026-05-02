@@ -91,7 +91,7 @@ html {
 </main>
 </section> 
 
-<section id="home" class="home srollable">
+<section id="home" class="home">
     <div class="menu-opsi">
   <i class="bi bi-three-dots-vertical"></i>
 </div>
@@ -573,30 +573,7 @@ history.scrollRestoration = "manual";
 
 <script>
 
-    document.addEventListener("wheel", function(e) {
-  if (document.body.classList.contains("no-scroll")) {
-
-    const scrollable = e.target.closest(".scrollable");
-
-    if (!scrollable) {
-      e.preventDefault(); // blok scroll luar
-    }
-
-  }
-}, { passive: false });
-
-
-document.addEventListener("touchmove", function(e) {
-  if (document.body.classList.contains("no-scroll")) {
-
-    const scrollable = e.target.closest(".scrollable");
-
-    if (!scrollable) {
-      e.preventDefault();
-    }
-
-  }
-}, { passive: false });
+    
 
   
 
@@ -648,9 +625,6 @@ document.addEventListener("touchmove", function(e) {
     });
   }
 }
-
-  function bukaUndangan() {
-  document.body.classList.add("no-scroll"); // ⛔ kunci scroll
 
   document.getElementById("home").scrollIntoView({
     behavior: "smooth"
@@ -809,6 +783,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+        <script>
+window.addEventListener("load", function () {
+  document.body.classList.add("lock-scroll");
+});
+
+function bukaUndangan() {
+  // buka scroll
+  document.body.classList.remove("lock-scroll");
+
+  // scroll ke home
+  document.getElementById("home").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  // play musik
+  const audio = document.getElementById("song");
+  const iconWrapper = document.querySelector(".audio-icon-wrapper");
+  const icon = iconWrapper.querySelector("i");
+
+  iconWrapper.classList.add("show", "rotate");
+  icon.classList.remove("bi-play-fill");
+  icon.classList.add("bi-disc");
+
+  audio.play().catch(() => {});
+}
+</script>
+        
 
 <body class="lock-scroll">
     <div class="slide-nav">
