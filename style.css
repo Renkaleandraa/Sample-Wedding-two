@@ -1539,6 +1539,16 @@ overflow-x: hidden;
 }
 
 /* MOBILE PHONE */
+
+@media (max-width: 768px) {
+  .mynavbar .offcanvas {
+    width: 75% !important;
+    max-width: 320px;
+  }
+}
+
+
+
 @media (max-width: 576px) {
     html {
       font-size: 60%;
