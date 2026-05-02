@@ -1161,22 +1161,6 @@ section {
   display: block;
 }
 
-html, body {
-  scroll-snap-type: none;
-}
-
-section {
-  scroll-snap-align: none;
-  min-height: auto;
-  position: relative;
-  padding: 80px 20px;
-}
-
-
-.scrollable {
-  max-height: 100vh;
-  overflow-y: auto;
-}
 
 .scrollable {
   -webkit-overflow-scrolling: touch;
